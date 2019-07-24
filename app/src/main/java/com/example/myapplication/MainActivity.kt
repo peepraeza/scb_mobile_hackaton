@@ -7,6 +7,7 @@ import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.models.AuthAuthorize
+import com.example.myapplication.models.ProfileParcel
 import com.example.myapplication.models.ResponseEntity
 import com.example.myapplication.services.ApiManager
 import kotlinx.android.synthetic.main.activity_main.*
@@ -78,9 +79,21 @@ class MainActivity : AppCompatActivity() {
         ApiManager.tanJaiService.login(id, password).enqueue(object: Callback<ResponseEntity>{
             override fun onResponse(call: Call<ResponseEntity>, response: Response<ResponseEntity>) {
                 if(response.body()!!.status.code == 1000){
-                    val intent = Intent(this@MainActivity, Details::class.java)
+                    val res = response.body()!!.data
+                    val name = res.name
+                    val lastName = res.lastName
+                    val phoneNumber = res.phoneNumber
+                    val gender = res.gender
+                    val id = res.citizenId
+                    val point = res.point
+                    val alias = res.alias
+
+                    val intent = Intent(this@MainActivity, HomePage::class.java)
+                    val userProfile = ProfileParcel(id, name, lastName, phoneNumber, gender, alias, point.toString())
+                    intent.putExtra("userProfile", userProfile)
                     startActivity(intent)
                 }else{
+
                     Toast.makeText(this@MainActivity, "Cannot Login", Toast.LENGTH_LONG).show()
                 }
             }

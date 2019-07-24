@@ -79,7 +79,7 @@ class LoadingPage : AppCompatActivity() {
                                 if (response.body()!!.data.status) {
                                     AlertDialog.Builder(this@LoadingPage).create().dismiss()
                                     val intent = Intent(this@LoadingPage, RegisterPage::class.java)
-                                    val userRegis = UserProfileParcel(firstname, lastname, phonenum_plaintext, gender, id)
+                                    val userRegis = UserRegisParcel(firstname, lastname, phonenum_plaintext, gender, id)
                                     intent.putExtra("userRegis", userRegis)
                                     startActivity(intent)
                                 }else{

@@ -3,7 +3,7 @@ package com.example.myapplication.models
 import android.os.Parcel
 import android.os.Parcelable
 
-data class UserProfileParcel(
+data class UserRegisParcel(
     val firstname: String?,
     val lastName: String?,
     val phoneNumber: String?,
@@ -31,12 +31,12 @@ data class UserProfileParcel(
         return 0
     }
 
-    companion object CREATOR : Parcelable.Creator<UserProfileParcel> {
-        override fun createFromParcel(parcel: Parcel): UserProfileParcel {
-            return UserProfileParcel(parcel)
+    companion object CREATOR : Parcelable.Creator<UserRegisParcel> {
+        override fun createFromParcel(parcel: Parcel): UserRegisParcel {
+            return UserRegisParcel(parcel)
         }
 
-        override fun newArray(size: Int): Array<UserProfileParcel?> {
+        override fun newArray(size: Int): Array<UserRegisParcel?> {
             return arrayOfNulls(size)
         }
     }

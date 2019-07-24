@@ -3,15 +3,19 @@ package com.example.myapplication
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.myapplication.models.UserProfileParcel
+import com.example.myapplication.models.ProfileParcel
+import com.example.myapplication.models.UserRegisParcel
+import kotlinx.android.synthetic.main.home_page.*
 
 class HomePage : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.home_page)
-        val userRegis = intent.getParcelableExtra<UserProfileParcel>("userRegis")
-        val(firstname, lastname, phoneNumber, gender, id)= userRegis
-        Toast.makeText(applicationContext, "Name: ${firstname} ${lastname}", Toast.LENGTH_LONG).show()
+        val userProfile = intent.getParcelableExtra<ProfileParcel>("userProfile")
+        val(id, name, lastName, phoneNumber, gender, alias, point)= userProfile
+//
+        name_homepage_text.setText("${name} ${lastName}" )
+        point_txt.setText(point)
     }
 }

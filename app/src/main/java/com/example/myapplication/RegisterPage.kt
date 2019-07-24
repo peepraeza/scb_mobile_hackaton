@@ -3,6 +3,7 @@ package com.example.myapplication
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log.d
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.models.*
 import com.example.myapplication.services.ApiManager
@@ -10,6 +11,7 @@ import kotlinx.android.synthetic.main.register_page.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.lang.Exception
 
 
 class RegisterPage : AppCompatActivity() {
@@ -18,7 +20,7 @@ class RegisterPage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.register_page)
 
-        val userRegis = intent.getParcelableExtra<UserProfileParcel>("userRegis")
+        val userRegis = intent.getParcelableExtra<UserRegisParcel>("userRegis")
         var (firstname, lastname, phoneNumber, gender, id) = userRegis
 
         name_text.setText(firstname + " " + lastname)
@@ -36,7 +38,14 @@ class RegisterPage : AppCompatActivity() {
             )
             ApiManager.tanJaiService.postUser(bodyUserRegis).enqueue(object : Callback<ResponseEntity> {
                 override fun onResponse(call: Call<ResponseEntity>, response: Response<ResponseEntity>) {
-                    d("Pee", "Pass")
+                    try {
+                        if (response.body()!!.status.code == 1000) {
+                            val intent = Intent(this@RegisterPage, HomePage::class.java)
+                            startActivity(intent)
+                        }
+                    } catch (e: Exception) {
+                        Toast.makeText(applicationContext, "Cannot Register", Toast.LENGTH_LONG).show()
+                    }
                 }
                 override fun onFailure(call: Call<ResponseEntity>, t: Throwable) {
                     d("Pee", "Not Pass")

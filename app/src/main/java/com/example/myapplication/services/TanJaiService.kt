@@ -1,7 +1,6 @@
 package com.example.myapplication.services
 
 import com.example.myapplication.models.ResponseEntity
-import com.example.myapplication.models.UserProfileParcel
 import com.example.myapplication.models.UserRegis
 import retrofit2.Call
 import retrofit2.http.Body

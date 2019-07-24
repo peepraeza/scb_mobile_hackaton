@@ -5,12 +5,20 @@ data class ResponseEntity (
     val data: Data
     )
 {
-        data class Status(
-            val code: Int,
-            val message: String
-        )
+    data class Status(
+        val code: Int,
+        val message: String
+    )
 
-        data class Data(
-            val status: Boolean
-        )
+    data class Data(
+        val status: Boolean,
+        val citizenId: String,
+        val name: String,
+        val lastName: String,
+        val phoneNumber: String,
+        val gender: String,
+        val alias: String,
+        val password: String,
+        val point:Int
+    )
 }
