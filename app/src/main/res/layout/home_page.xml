@@ -83,7 +83,7 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/reward3"
         android:layout_width="match_parent"
-        android:layout_height="160dp">
+        android:layout_height="160dp" android:id="@+id/reward_btn">
     </Button>
 
     <Button
@@ -91,7 +91,7 @@
         android:layout_marginBottom="10dp"
         android:background="@drawable/cardless2"
         android:layout_width="match_parent"
-        android:layout_height="160dp">
+        android:layout_height="160dp" android:id="@+id/cardless_btn">
     </Button>
 
 </LinearLayout>

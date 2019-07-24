@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -17,5 +18,15 @@ class HomePage : AppCompatActivity() {
 //
         name_homepage_text.setText("${name} ${lastName}" )
         point_txt.setText(point)
+
+        reward_btn.setOnClickListener{
+            val intent = Intent(this@HomePage, RewardPage::class.java)
+            startActivity(intent)
+        }
+
+        cardless_btn.setOnClickListener{
+            val intent = Intent(this@HomePage, Details::class.java)
+            startActivity(intent)
+        }
     }
 }
