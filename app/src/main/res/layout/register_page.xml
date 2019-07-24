@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/b"
+    android:orientation="vertical"
+    tools:context=".RegisterPage">
+
+    <LinearLayout
+        android:background="#CEA93B"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:typeface="monospace"
+            android:text="Register"
+            android:fontFamily="@font/monkhangbold"
+            android:textColor="#3A3737"
+            android:layout_marginTop="14dp"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:textSize="40dp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/background"
+                android:text="Citizen ID"
+                android:textSize="15dp"
+                android:padding="12dp"
+
+                android:textColor="#3A3737"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/citizen_id_text"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:padding="12dp"
+                android:background="@drawable/background"
+                android:layout_centerHorizontal="true"
+                android:textSize="15dp"
+                android:textColor="#3A3737"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/background"
+                android:text="Name"
+                android:layout_centerHorizontal="true"
+                android:textSize="15dp"
+                android:padding="12dp"
+                android:textColor="#3A3737"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/name_text"
+                android:layout_marginLeft="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:padding="12dp"
+                android:background="@drawable/background"
+                android:layout_centerHorizontal="true"
+                android:textSize="15dp"
+                android:textColor="#3A3737"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/background"
+                android:text="Gender"
+                android:padding="12dp"
+                android:layout_centerHorizontal="true"
+                android:textSize="15dp"
+                android:textColor="#3A3737"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/gender_text"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:padding="12dp"
+                android:background="@drawable/background"
+                android:layout_centerHorizontal="true"
+                android:textSize="15dp"
+                android:textColor="#3A3737"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:paddingTop="10dp"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/background"
+                android:text="Phone No."
+                android:padding="12dp"
+                android:layout_centerHorizontal="true"
+                android:textSize="15dp"
+                android:textColor="#3A3737"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/phone_text"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:padding="12dp"
+                android:background="@drawable/background"
+                android:layout_centerHorizontal="true"
+                android:textSize="15dp"
+                android:hint="Phone No."
+                android:textColor="#3A3737"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/background"
+                android:text="Alias Name"
+                android:padding="10dp"
+                android:layout_centerHorizontal="true"
+                android:textSize="15dp"
+                android:textColor="#3A3737"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/alias_text"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/background"
+                android:layout_centerHorizontal="true"
+                android:textSize="15dp"
+                android:padding="10dp"
+                android:hint="Alias Name"
+                android:textColor="#3A3737"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:paddingTop="10dp"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/background"
+                android:text="Password"
+                android:layout_centerHorizontal="true"
+                android:textSize="15dp"
+                android:textColor="#3A3737"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/password_text"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:background="@drawable/background"
+                android:layout_centerHorizontal="true"
+                android:textSize="15dp"
+                android:textColor="#3A3737"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/register_submit_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_button"
+            android:text="REGISTER"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:id="@+id/cancel_btn"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="CANCEL"
+            android:textSize="20dp"
+            android:textColor="#3A3737"
+            android:textStyle="bold"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+
+</LinearLayout>
