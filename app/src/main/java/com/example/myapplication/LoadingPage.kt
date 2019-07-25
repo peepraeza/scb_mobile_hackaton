@@ -41,7 +41,7 @@ class LoadingPage : AppCompatActivity() {
         )
         Log.d("Pee", authCode)
 
-        ApiManager.authService.postKey(body).enqueue(object : Callback<AuthToken> {
+        ApiManager.scbService.postKey(body).enqueue(object : Callback<AuthToken> {
             override fun onResponse(call: Call<AuthToken>, response: Response<AuthToken>) {
                 Log.d("Pee", "${response.code()}")
                 Log.d("Pee", "${response.body()!!.data.accessToken}")
@@ -50,7 +50,7 @@ class LoadingPage : AppCompatActivity() {
                 val accessToken = "Bearer " + response.body()!!.data.accessToken
                 val resourceId = response.headers().get("resourceownerid").toString()
 
-                ApiManager.authService.getCustomer(accessToken, resourceId).enqueue(object : Callback<CustomerProfile> {
+                ApiManager.scbService.getCustomer(accessToken, resourceId).enqueue(object : Callback<CustomerProfile> {
                     override fun onResponse(call: Call<CustomerProfile>, response: Response<CustomerProfile>) {
                         val firstname = response.body()!!.data.profile.engFirstName
                         val lastname = response.body()!!.data.profile.engLastName

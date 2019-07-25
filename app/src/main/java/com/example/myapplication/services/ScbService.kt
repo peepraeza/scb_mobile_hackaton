@@ -7,7 +7,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.http.*
 
-interface AuthService {
+interface ScbService {
 
 
 
@@ -38,6 +38,14 @@ interface AuthService {
         "apikey: l72eb1a5af8392429690292e82bda0574e")
     fun authorize(): Call<AuthAuthorize>
 
+    @POST("/partners/sandbox/v1/payment/qrcode/create")
+    @Headers(
+        "Content-Type: application/json",
+        "resourceOwnerId: l72eb1a5af8392429690292e82bda0574e",
+        "requestUId: 1",
+        "accept-language: EN")
+    fun generateQrCode(@Header("authorization")token: String,
+                       @Body body: GenQrCodeReqBody): Call<GenQrCodeResponse>
 
 
 }

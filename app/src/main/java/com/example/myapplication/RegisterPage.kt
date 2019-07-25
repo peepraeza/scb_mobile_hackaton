@@ -36,7 +36,7 @@ class RegisterPage : AppCompatActivity() {
                 firstname.toString(), lastname.toString(), phoneNumber.toString(),
                 gender.toString(), password, id.toString(), alias
             )
-            ApiManager.tanJaiService.postUser(bodyUserRegis).enqueue(object : Callback<ResponseEntity> {
+            ApiManager.tanJaiService.register(bodyUserRegis).enqueue(object : Callback<ResponseEntity> {
                 override fun onResponse(call: Call<ResponseEntity>, response: Response<ResponseEntity>) {
                     try {
                         if (response.body()!!.status.code == 1000) {

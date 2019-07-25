@@ -11,7 +11,7 @@ import retrofit2.http.POST
 interface TanJaiService {
 
     @POST("/api/user")
-    fun postUser(@Body body: UserRegis): Call<ResponseEntity>
+    fun register(@Body body: UserRegis): Call<ResponseEntity>
 
     @GET("/api/user/verifyUser")
     fun verifyUser(@Header ("citizenId")id: String):Call<ResponseEntity>

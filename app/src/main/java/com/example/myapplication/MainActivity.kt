@@ -49,6 +49,9 @@ class MainActivity : AppCompatActivity() {
 
         register_btn.setOnClickListener {
             getDeeplink()
+//            val intent = Intent(this@MainActivity, Details::class.java)
+//            startActivity(intent)
+
         }
 
     }
@@ -72,7 +75,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getDeeplink() {
-        ApiManager.authService.authorize().enqueue(authAuthorizeCallback)
+        ApiManager.scbService.authorize().enqueue(authAuthorizeCallback)
     }
 
     private fun goLogin(id: String, password: String){

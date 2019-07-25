@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="#4E2E7F"
+    android:background="#C2B9B9"
     tools:context=".Details">
 
     <ImageView
@@ -21,14 +21,14 @@
         android:padding="8dp">
 
         <TextView
-            android:id="@+id/mTitleTextView"
-            android:text="Title"
+            android:id="@+id/mNameTextView"
+            android:text="Name"
             android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <TextView
-            android:id="@+id/mSubTitleTextView"
-            android:text="Subtitle"
+            android:id="@+id/mEmailTextView"
+            android:text="Email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
     </LinearLayout>
