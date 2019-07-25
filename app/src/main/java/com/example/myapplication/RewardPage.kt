@@ -13,18 +13,9 @@ class RewardPage : AppCompatActivity() {
         setContentView(R.layout.reward_page)
         val userProfile = intent.getParcelableExtra<ProfileParcel>("userProfile")
         val(id, name, lastName, phoneNumber, gender, alias, point)= userProfile
-//
+
         name_homepage_text.setText("${name} ${lastName}" )
         point_txt.setText(point)
 
-        reward_btn.setOnClickListener{
-            val intent = Intent(this@RewardPage, RewardPage::class.java)
-            startActivity(intent)
-        }
-
-        cardless_btn.setOnClickListener{
-            val intent = Intent(this@RewardPage, Details::class.java)
-            startActivity(intent)
-        }
     }
 }

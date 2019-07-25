@@ -23,6 +23,8 @@ class HomePage : AppCompatActivity() {
 
         reward_btn.setOnClickListener{
             val intent = Intent(this@HomePage, RewardPage::class.java)
+            val userProfile = ProfileParcel(id, name, lastName, phoneNumber, gender, alias, point.toString())
+            intent.putExtra("userProfile", userProfile)
             startActivity(intent)
         }
 
