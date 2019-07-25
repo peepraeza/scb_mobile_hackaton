@@ -33,14 +33,26 @@ class RegisterPage : AppCompatActivity() {
             phoneNumber = phone_text.text.toString()
             var alias = alias_text.text.toString()
             val bodyUserRegis = UserRegis(
-                firstname.toString(), lastname.toString(), phoneNumber.toString(),
-                gender.toString(), password, id.toString(), alias
+                id.toString(), firstname.toString(), lastname.toString(),
+                phoneNumber.toString(),  gender.toString(), password, alias
             )
+            println(bodyUserRegis)
             ApiManager.tanJaiService.register(bodyUserRegis).enqueue(object : Callback<ResponseEntity> {
                 override fun onResponse(call: Call<ResponseEntity>, response: Response<ResponseEntity>) {
+                    d("Pee", response.body()!!.status.code.toString())
                     try {
                         if (response.body()!!.status.code == 1000) {
+                            val res = response.body()!!.data
+                            val name = res.name
+                            val lastName = res.lastName
+                            val phoneNumber = res.phoneNumber
+                            val gender = res.gender
+                            val id = res.citizenId
+                            val point = res.point
+                            val alias = res.alias
                             val intent = Intent(this@RegisterPage, HomePage::class.java)
+                            val userProfile = ProfileParcel(id, name, lastName, phoneNumber, gender, alias, point.toString())
+                            intent.putExtra("userProfile", userProfile)
                             startActivity(intent)
                         }
                     } catch (e: Exception) {

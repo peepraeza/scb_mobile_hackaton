@@ -13,7 +13,9 @@ class HomePage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.home_page)
+
         val userProfile = intent.getParcelableExtra<ProfileParcel>("userProfile")
+
         val(id, name, lastName, phoneNumber, gender, alias, point)= userProfile
 //
         name_homepage_text.setText("${name} ${lastName}" )
@@ -28,5 +30,9 @@ class HomePage : AppCompatActivity() {
             val intent = Intent(this@HomePage, Details::class.java)
             startActivity(intent)
         }
+    }
+
+    override fun onBackPressed() {
+
     }
 }
