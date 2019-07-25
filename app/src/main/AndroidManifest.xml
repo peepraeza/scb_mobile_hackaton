@@ -14,8 +14,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GetData">
-        </activity>
         <activity android:name=".RewardPage">
         </activity>
         <activity android:name=".LoadingPage">
@@ -30,7 +28,7 @@
                     android:scheme="example"/>
             </intent-filter>
         </activity>
-        <activity android:name=".Details">
+        <activity android:name=".DashboardActivity">
         </activity>
         <activity android:name=".Location2Page">
         </activity>
@@ -40,7 +38,11 @@
         </activity>
         <activity android:name=".RegisterPage">
         </activity>
+        <activity android:name=".UserEnterAmount">
+        </activity>
+
         <activity android:name=".MainActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

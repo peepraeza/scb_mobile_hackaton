@@ -14,8 +14,8 @@ object ApiManager {
     }
 
 
-    val getUser by lazy {
-        createService<GetUser>("https://reqres.in/")
+    val userArea by lazy {
+        createService<UserArea>("http://192.168.101.38:8082/")
     }
 
     private inline fun <reified T> createService(baseUrl: String): T =

@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
 
         register_btn.setOnClickListener {
             getDeeplink()
-//            val intent = Intent(this@MainActivity, Details::class.java)
+//            val intent = Intent(this@MainActivity, HomePage::class.java)
 //            startActivity(intent)
 
         }
@@ -94,6 +94,7 @@ class MainActivity : AppCompatActivity() {
                     val intent = Intent(this@MainActivity, HomePage::class.java)
                     val userProfile = ProfileParcel(id, name, lastName, phoneNumber, gender, alias, point.toString())
                     intent.putExtra("userProfile", userProfile)
+                    Log.d("Pee", "Login to Dashboard")
                     startActivity(intent)
                 }else{
 
