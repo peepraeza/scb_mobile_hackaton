@@ -8,14 +8,17 @@
 
     <application
         android:allowBackup="true"
-        android:usesCleartextTraffic="true"
         android:icon="@mipmap/ic_launcher"
         android:label="Nong TanJai"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
         <activity android:name=".RewardPage">
         </activity>
+        <activity android:name=".NaviPage">
+        </activity>
+
         <activity android:name=".LoadingPage">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
@@ -28,10 +31,14 @@
                     android:scheme="example"/>
             </intent-filter>
         </activity>
+        <activity android:name=".ShowRewardActivity">
+        </activity>
         <activity android:name=".DashboardActivity">
         </activity>
         <activity android:name=".Location2Page">
         </activity>
+
+
         <activity android:name=".LocationPage">
         </activity>
         <activity android:name=".HomePage">
@@ -40,9 +47,9 @@
         </activity>
         <activity android:name=".UserEnterAmount">
         </activity>
-
+        <activity android:name=".UserWaiting">
+        </activity>
         <activity android:name=".MainActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

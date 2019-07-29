@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#EDEDED"
+              android:orientation="vertical">
+    <LinearLayout
+        android:background="@drawable/woman"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="130dp">
+
+        <LinearLayout
+            android:background="#95621A7E"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:typeface="monospace"
+                android:layout_marginLeft="20dp"
+                android:text="Welcome"
+                android:fontFamily="@font/font_app01"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="10dp"
+                android:textSize="30dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="30dp"
+                    android:src="@drawable/next"/>
+
+                <TextView
+                    android:id="@+id/name_homepage_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:typeface="monospace"
+                    android:text="Kanyaja Watcharawongkasem"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/fontb"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="20dp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="50dp"
+                    android:src="@drawable/coin"/>
+
+                <TextView
+                    android:text="Point : "
+                    android:textColor="#B7B5B5"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/fontb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:typeface="monospace"
+                    android:text="500"
+                    android:fontFamily="@font/fontb"
+                    android:textColor="#B7B5B5"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:id="@+id/point_txt"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+
+            android:background="#ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <ImageView
+                    android:id="@+id/img_qr"
+                    android:layout_width="320dp"
+                    android:layout_height="320dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:src="#FFF"/>
+
+
+
+            <TextView
+                    android:id="@+id/money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Waiting"
+                    android:textSize="30dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/font_app01"
+                    android:textColor="#000000"
+                   />
+
+
+
+        <LinearLayout android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center"
+                      android:layout_marginTop="45dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/confirm_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:fontFamily="@font/fontb"
+                    android:textSize="20dp"
+                    android:text="   Confirm   "
+                    android:background="@drawable/button_green_round"
+                    android:textColor="#FFFF"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

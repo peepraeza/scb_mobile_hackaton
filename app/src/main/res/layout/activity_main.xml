@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    android:background="@drawable/a"
+    android:background="@drawable/page_login"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -19,21 +19,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:text="NONG TANJAI"
-            android:textSize="40dp"
-            android:textStyle="bold"
-            android:textColor="#fff"
-            android:fontFamily="@font/monkhangbold"
-            android:textAlignment="center"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-
         <EditText
             android:id="@+id/citizen_id_login_text"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="112dp"
             android:shadowRadius="5"
-            android:inputType="textShortMessage"
+            android:inputType="number"
             android:hint="citizen ID"
             android:layout_centerHorizontal="true"
             android:background="@drawable/background"
@@ -45,7 +35,7 @@
         <EditText
             android:id="@+id/password_login_text"
             android:shadowRadius="5"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="16dp"
             android:inputType="textPassword"
             android:hint="password"
             android:layout_centerHorizontal="true"
@@ -57,7 +47,7 @@
 
         <Button
             android:id="@+id/login_btn"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             android:text="Login"
             android:textColor="#ffff"
             android:textSize="20dp"
@@ -68,7 +58,6 @@
 
         <Button
             android:id="@+id/register_btn"
-            android:layout_marginTop="10dp"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:text="Register >"
             android:textSize="20dp"

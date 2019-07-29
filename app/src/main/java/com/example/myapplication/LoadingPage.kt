@@ -39,13 +39,13 @@ class LoadingPage : AppCompatActivity() {
             "d49a07dae6684b65a7d193718d5325dc",
             authCode
         )
-        Log.d("Pee", authCode)
+        Log.i("Pee", authCode)
 
         ApiManager.scbService.postKey(body).enqueue(object : Callback<AuthToken> {
             override fun onResponse(call: Call<AuthToken>, response: Response<AuthToken>) {
-                Log.d("Pee", "${response.code()}")
-                Log.d("Pee", "${response.body()!!.data.accessToken}")
-                Log.d("Pee", response.headers().get("resourceownerid").toString())
+                Log.i("Pee", "${response.code()}")
+                Log.i("Pee", "Token : ${response.body()!!.data.accessToken}")
+                Log.i("Pee", response.headers().get("resourceownerid").toString())
 
                 val accessToken = "Bearer " + response.body()!!.data.accessToken
                 val resourceId = response.headers().get("resourceownerid").toString()
@@ -70,11 +70,11 @@ class LoadingPage : AppCompatActivity() {
                              }
                         }
 
-                        Log.d("Pee", "id : " + id)
+                        Log.i("Pee", "id : " + id)
                         ApiManager.tanJaiService.verifyUser(id).enqueue(object : Callback<ResponseEntity> {
                             override fun onResponse(call: Call<ResponseEntity>, response: Response<ResponseEntity>) {
-                                Log.d("Pee", response.code().toString())
-                                Log.d("Pee", response.body()!!.toString())
+                                Log.i("Pee", response.code().toString())
+                                Log.i("Pee", response.body()!!.toString())
 
                                 if (response.body()!!.data.status) {
                                     AlertDialog.Builder(this@LoadingPage).create().dismiss()

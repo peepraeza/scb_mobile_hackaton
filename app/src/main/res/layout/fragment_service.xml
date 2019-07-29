@@ -3,84 +3,68 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             >
+>
 
     <!-- TODO: Update blank fragment layout -->
 
-    <ScrollView android:layout_width="wrap_content" android:layout_height="wrap_content">
-    <LinearLayout
-
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            android:background="#ffffff"
-            android:layout_width="match_parent"
-            android:layout_height="481dp"
-            android:orientation="vertical"
-            android:layout_marginTop="10dp">
 
         <LinearLayout
 
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:background="#ffffff"
-                android:layout_width="match_parent"
-                android:layout_height="481dp"
-                android:orientation="vertical">
+            android:background="#C3C3C3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                      android:text="ให้บริการได้ไม่เกิน xxx ต่อครั้ง"
-                      android:textSize="20dp"
-                      android:layout_gravity="center"
-                      android:layout_margin="60dp"
-                      android:textColor="#000000"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Limit 1000 Baht"
+                android:textSize="35dp"
+                android:fontFamily="@font/fontb"
+                android:layout_gravity="center"
+                android:layout_margin="60dp"
+                android:textColor="#000000"/>
 
-            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
-                          android:layout_gravity="center"
-                          android:layout_marginBottom="30dp">
-
-                <Switch android:layout_width="67dp" android:layout_height="38dp"
-                        android:scaleX="1.5"
-                        android:scaleY="1.5"/>
-
-                <TextView android:layout_width="152dp" android:layout_height="match_parent"
-                          android:text="เปิดให้บริการ"
-                          android:textColor="#000000"
-                          android:textSize="18dp"
-                          android:paddingLeft="30dp"/>
-
-            </LinearLayout>
-
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                      android:text="ระบุจำนวนเงิน"
-                      android:textSize="18dp"
-                      android:layout_marginLeft="45dp"
-                      android:textColor="#000000"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Specify amount"
+                android:textSize="25dp"
+                android:fontFamily="@font/fontb"
+                android:layout_marginLeft="45dp"
+                android:textColor="#000000"/>
 
             <EditText android:layout_width="300dp" android:layout_height="51dp"
                       android:id="@+id/edit_price"
                       android:background="@drawable/edit_round"
                       android:height="7dp"
+                      android:paddingRight="15dp"
                       android:layout_marginTop="15dp"
+                      android:hint="0"
                       android:textAlignment="textEnd"
-                      android:paddingRight="10dp"
-                      android:maxLength="5"
                       android:inputType="number"
                       android:layout_gravity="center"/>
 
-            <LinearLayout android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
                           android:layout_gravity="center"
-                          android:layout_marginTop="45dp">
+                          android:layout_marginBottom="40dp"
+                          android:layout_marginTop="30dp">
 
-                <androidx.appcompat.widget.AppCompatButton
-                        android:layout_width="110dp"
-                        android:layout_height="40dp"
-                        android:id="@+id/confirm_btn"
-                        android:textSize="17dp"
-                        android:text="Save"
-                        android:background="@drawable/button_blue_round"
-                        android:textColor="#FFFF"
-                />
+                <Switch android:layout_width="70dp" android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:scaleX="1.8"
+                        android:scaleY="1.8" android:id="@+id/toggle_btn"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="match_parent"
+                          android:text="Open service"
+                          android:textColor="#000000"
+                          android:gravity="center"
+                          android:layout_gravity="center"
+                          android:fontFamily="@font/font_app01"
+                          android:textSize="25dp"
+
+                          android:paddingLeft="30dp"/>
+
 
             </LinearLayout>
 
@@ -88,7 +72,4 @@
         </LinearLayout>
 
 
-    </LinearLayout>
-
-    </ScrollView>
 </FrameLayout>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#EDEDED"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:background="@drawable/money01"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="130dp">
+
+        <LinearLayout
+            android:background="#95621A7E"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:typeface="monospace"
+                android:layout_marginLeft="20dp"
+                android:text="Rating"
+                android:fontFamily="@font/font_app01"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="10dp"
+                android:textSize="25dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="30dp"
+                    android:src="@drawable/next"/>
+
+                <TextView
+                    android:id="@+id/name_destination"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:typeface="monospace"
+                    android:text="Kanyaja Watcharawongkasem"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/fontb"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="20dp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="50dp"
+                    android:src="@drawable/map_pin"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:typeface="monospace"
+                    android:text="500"
+                    android:fontFamily="@font/fontb"
+                    android:textColor="#B7B5B5"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:id="@+id/distance_destination"/>
+
+                <TextView
+                    android:text="M from you"
+                    android:textColor="#B7B5B5"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/fontb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:layout_width="match_parent" android:layout_height="76dp"
+                  android:gravity="center"
+                  android:background="#DA532281"
+                  android:textSize="23dp"
+                  android:textColor="#ffff"
+                  android:text="Money Limit : 1000 Baht"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:background="#C3C3C3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="35dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:id="@+id/txt_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Withdraw : "
+                    android:textSize="25dp"
+                    android:fontFamily="@font/fontb"
+                    android:textColor="#000000"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_price"
+                    android:layout_margin="20dp"
+                    android:text="500"
+                    android:fontFamily="@font/fontb"
+                    android:textSize="30dp"
+                    android:textColor="#000000"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Baht"
+                    android:fontFamily="@font/fontb"
+                    android:textSize="25dp"
+                    android:textColor="#000000"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/txt_waiting"
+                  android:textColor="#000000"
+                  android:text="Please wait..."
+                  android:fontFamily="@font/font_app01"
+                  android:layout_marginBottom="50dp"
+                  android:textSize="25dp"
+                  android:layout_gravity="center"
+        />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="110dp"
+            android:id="@+id/cancel_pending_btn"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:text="Cancel"
+            android:fontFamily="@font/fontb"
+            android:background="@drawable/button_red_round"
+            android:textColor="#FFFF"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

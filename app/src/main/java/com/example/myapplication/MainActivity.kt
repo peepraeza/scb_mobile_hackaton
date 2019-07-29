@@ -48,9 +48,9 @@ class MainActivity : AppCompatActivity() {
 //        }
 
         register_btn.setOnClickListener {
-            getDeeplink()
-//            val intent = Intent(this@MainActivity, HomePage::class.java)
+//            val intent = Intent(this, NaviPage::class.java)
 //            startActivity(intent)
+            getDeeplink()
 
         }
 

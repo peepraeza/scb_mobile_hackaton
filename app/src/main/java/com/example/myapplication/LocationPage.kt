@@ -65,26 +65,7 @@ class LocationPage : AppCompatActivity(), View.OnClickListener, com.google.andro
         }
     }
 
-    private fun getJA() {
-        d("PEE", "On Click Ja")
-        if (!checkGPSEnabled()) {
-            return
-        }
 
-        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-                //Location Permission already granted
-                d("PEE", "Come first if")
-                getLocation();
-            } else {
-                //Request Location Permission
-                checkLocationPermission()
-            }
-        } else {
-            d("PEE", "Come Else")
-            getLocation();
-        }
-    }
 
     @SuppressLint("MissingPermission")
     private fun getLocation() {
@@ -125,9 +106,6 @@ class LocationPage : AppCompatActivity(), View.OnClickListener, com.google.andro
         btFetchLocation.setOnClickListener(this)
         d("PEE", "click get location")
         buildGoogleApiClient()
-
-        getJA()
-
 
     }
 

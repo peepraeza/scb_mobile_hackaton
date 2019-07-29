@@ -8,22 +8,13 @@
     tools:context=".HomePage">
 
     <LinearLayout
-        android:background="#8560ef"
+        android:background="@drawable/woman"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="100dp">
-
-        <ImageView
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginRight="10dp"
-            android:background="@drawable/icon_people"
-            android:layout_width="80dp"
-            android:layout_height="80dp"/>
+        android:layout_height="220dp">
 
         <LinearLayout
-            android:layout_marginLeft="6dp"
+            android:background="#95621A7E"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -32,33 +23,59 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:typeface="monospace"
-                android:text="Hello"
+                android:layout_marginLeft="20dp"
+                android:text="Welcome"
+                android:fontFamily="@font/font_app01"
                 android:textColor="#FFFFFF"
                 android:layout_marginTop="10dp"
-                android:textSize="15dp"
-                android:textStyle="bold"/>
-
-            <TextView
-                android:id="@+id/name_homepage_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:typeface="monospace"
-                android:text="Kanyaja Watcharawongkasem"
-                android:textColor="#FFFFFF"
-                android:textSize="15dp"
+                android:textSize="30dp"
                 android:textStyle="bold"/>
 
             <LinearLayout
-                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="30dp"
+                    android:src="@drawable/next"/>
+
+                <TextView
+                    android:id="@+id/name_homepage_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:typeface="monospace"
+                    android:text="Kanyaja Watcharawongkasem"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/fontb"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="20dp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
+                android:gravity="center"
                 android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="50dp"
+                    android:src="@drawable/coin"/>
 
                 <TextView
                     android:text="Point : "
-                    android:textColor="#FFFFFF"
-                    android:textSize="15dp"
+                    android:textColor="#B7B5B5"
+                    android:textSize="20dp"
                     android:textStyle="bold"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/fontb"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
@@ -67,8 +84,9 @@
                     android:layout_height="wrap_content"
                     android:typeface="monospace"
                     android:text="500"
-                    android:textColor="#FFFFFF"
-                    android:textSize="15dp"
+                    android:fontFamily="@font/fontb"
+                    android:textColor="#B7B5B5"
+                    android:textSize="20dp"
                     android:textStyle="bold"
                     android:id="@+id/point_txt"/>
 
@@ -78,20 +96,67 @@
         </LinearLayout>
 
     </LinearLayout>
-    cardless2.jpg
-    <Button
-        android:layout_marginTop="10dp"
-        android:background="@drawable/reward3"
-        android:layout_width="match_parent"
-        android:layout_height="160dp" android:id="@+id/reward_btn">
-    </Button>
 
-    <Button
+
+    <LinearLayout
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/cardless2"
+        android:background="@drawable/reward"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="160dp" android:id="@+id/cardless_btn">
-    </Button>
+        android:layout_height="180dp">
+
+        <LinearLayout
+            android:id="@+id/reward_btn"
+            android:background="#753F0D1B"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:background="#8F3F0D1B"
+                android:typeface="monospace"
+                android:text="     Reward     "
+                android:fontFamily="@font/font_app01"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="10dp"
+                android:textSize="30dp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:background="@drawable/cardless"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="180dp">
+
+        <LinearLayout
+            android:id="@+id/cardless_btn"
+            android:background="#4A185333"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:background="#B4185333"
+                android:typeface="monospace"
+                android:gravity="center"
+                android:text="     Cardless     "
+                android:fontFamily="@font/font_app01"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="10dp"
+                android:textSize="30dp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>

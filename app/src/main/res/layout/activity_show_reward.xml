@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:tools="http://schemas.android.com/tools"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:background="#22020202"
+		tools:context=".RewardPage">
+	
+	<LinearLayout
+			android:background="@drawable/reward"
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="220dp">
+		
+		<LinearLayout
+				android:background="#95621A7E"
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+			
+			<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:typeface="monospace"
+					android:layout_marginLeft="20dp"
+					android:text="Reward"
+					android:fontFamily="@font/font_app01"
+					android:textColor="#FFFFFF"
+					android:layout_marginTop="10dp"
+					android:textSize="30dp"
+					android:textStyle="bold"/>
+			
+			<LinearLayout
+					android:gravity="center"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+				
+				
+				<ImageView
+						android:layout_width="20dp"
+						android:layout_height="20dp"
+						android:layout_marginLeft="30dp"
+						android:src="@drawable/next"/>
+				
+				<TextView
+						android:id="@+id/name_homepage_text"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:typeface="monospace"
+						android:text="Kanyaja Watcharawongkasem"
+						android:textColor="#FFFFFF"
+						android:fontFamily="@font/fontb"
+						android:layout_marginLeft="5dp"
+						android:textSize="20dp"
+						android:textStyle="bold"/>
+			
+			</LinearLayout>
+			
+			<LinearLayout
+					android:layout_marginTop="5dp"
+					android:orientation="horizontal"
+					android:layout_width="wrap_content"
+					android:gravity="center"
+					android:layout_height="wrap_content">
+				<ImageView
+						android:layout_width="20dp"
+						android:layout_height="20dp"
+						android:layout_marginLeft="50dp"
+						android:src="@drawable/coin"/>
+				
+				<TextView
+						android:text="Point : "
+						android:textColor="#B7B5B5"
+						android:textSize="20dp"
+						android:textStyle="bold"
+						android:layout_marginLeft="5dp"
+						android:fontFamily="@font/fontb"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"/>
+				
+				<TextView
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:typeface="monospace"
+						android:text="500"
+						android:fontFamily="@font/fontb"
+						android:textColor="#B7B5B5"
+						android:textSize="20dp"
+						android:textStyle="bold"
+						android:id="@+id/point_txt"/>
+			
+			</LinearLayout>
+		
+		
+		</LinearLayout>
+	
+	</LinearLayout>
+	
+	<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+		
+		<TextView
+				android:id="@+id/reward_code"
+				android:layout_width="match_parent"
+				android:layout_height="76dp"
+				android:gravity="center"
+				android:background="#DA532281"
+				android:textSize="30dp"
+				android:textColor="#ffff"/>
+	
+	</LinearLayout>
+	
+	<LinearLayout
+			android:layout_marginTop="20dp"
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+		
+		<TextView
+				android:id="@+id/name_reward"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:typeface="monospace"
+				android:text="Show reward"
+				android:fontFamily="@font/monkhangbold"
+				android:textColor="#555353"
+				android:layout_centerHorizontal="true"
+				android:textAlignment="center"
+				android:textSize="26dp">
+		</TextView>
+		
+		<TextView
+				android:id="@+id/reward_detail"
+				android:layout_marginTop="10dp"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:typeface="monospace"
+				android:text="Show reward1111"
+				android:fontFamily="@font/font_app"
+				android:textColor="#555353"
+				android:layout_centerHorizontal="true"
+				android:textAlignment="center"
+				android:textSize="20dp">
+		</TextView>
+		
+		<TextView
+				android:paddingTop="10dp"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:typeface="monospace"
+				android:text="Can use point within 15 days."
+				android:textColor="#555353"
+				android:fontFamily="@font/font_app"
+				android:layout_centerHorizontal="true"
+				android:textAlignment="center"
+				android:textSize="20dp">
+		</TextView>
+	
+	
+	</LinearLayout>
+
+</LinearLayout>
